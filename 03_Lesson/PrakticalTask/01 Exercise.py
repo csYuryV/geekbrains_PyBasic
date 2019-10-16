@@ -6,13 +6,20 @@ Python Basic Lesson 03, Exercise 01
 предусмотреть обработку ситуации деления на ноль.
 
 
-0191015 Sikorskiy Yuriy
+20191015 Sikorskiy Yuriy
 cs.yury.v@pn.me
 
 '''
 
 
 def fDivision(aDividend, aDivider):
+    """
+    fDivision реализует деление float(aDividend) на float(aDivider).
+
+    :param aDividend:
+    :param aDivider:
+    :return:
+    """
     try:
         isDivisionByZero = True
         quotientFromDivision = aDividend / aDivider
@@ -21,34 +28,42 @@ def fDivision(aDividend, aDivider):
         return None, isDivisionByZero
 
 
-def isfloat(value):
+def isfloat(aValue):
+    """fDivision проверяет возможность приведения переменной aValue к типу float
+    :param value:
+    :return:
+    """
     try:
-        float(value)
+        float(aValue)
         return True
     except ValueError:
         return False
 
 
 def inputNum(aInvite='Введите число'):
+    """
+    :param aInvite:
+    :return:
+    """
     while True:
-
-        sInt = input(aInvite)
+        sFloat = input(aInvite)
         if sInt == '':
             return None
-        if isfloat(sInt):
-            return float(sInt)
+        if isfloat(sFloat):
+            return float(sFloat)
         else:
-            print(f"{sInt} не относится к численному типу.")
+            print(f"{sFloat} не относится к численному типу.")
 
-
+print(
+    'Чтобы получить частное от деления, введите значения делимого и делителя.\nДля завершения работы введите пустую строку.')
 while True:
     dividend = inputNum('Введите делимое: ')
     if dividend is None:
-        print('Задача завершена.')
+        print('Программа завершена.')
         break
     divider = inputNum('Введите делитель: ')
     if divider is None:
-        print('Задача завершена.')
+        print('Программа завершена.')
         break
     quotientFromDivision, isDivisionByZero = fDivision(dividend, divider)
     if isDivisionByZero:
