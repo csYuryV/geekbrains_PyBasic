@@ -11,36 +11,20 @@ cs.yury.v@pn.me
 
 """
 
+
 def my_func(x, y):
     """ Возводит x в степень y, при условии что x - действительное положительное число,
     а y - отрицательное целое"""
-
-    multiplication = x
-    for i in range(-y-1):
+    try:
+        multiplication = x = float(x)
+        y = int(y)
+    except:
+        return "Ошибка значения."
+    if x <= 0 or y >= 0:
+        return "Ошибка допустипомого диапазона значений"
+    for i in range(-y - 1):
         multiplication *= x
+    return f'{x} ** {y} = {1 / multiplication}'
 
-    return 1/multiplication
-
-
-while True:
-    try:
-        x = float(input('Введите дествительное положительное число \'x\': '))
-    except ValueError:
-        print('Неккоректный ввод.')
-        continue
-    if not x > 0:
-        print('Значение \'х\'должно быть положительным.')
-    else:
-        break
-while True:
-    try:
-        y = int(input('Введите целое отричательное число \'y\': '))
-    except ValueError:
-        print('Неккоректный ввод.')
-        continue
-    if y >= 0:
-        print('Значение \'y\' должно быть отрицательным.')
-    else:
-        break
-
-print(f'my_func({x}, {y}) = {my_func(x, y)}, для проверки pow({x}, {y}) = {pow(x, y)}')
+print(my_func(input('Введите действительное положительное значение\'x\': '),
+              input('Введите отрицательное целое значение \'y\': ')))
