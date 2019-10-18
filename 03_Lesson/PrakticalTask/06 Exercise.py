@@ -26,8 +26,8 @@ def int_func(aStr):
     return aStr.title()
 
 
-print(int_func('test'))  # Test
-print(int_func('teSt'))  # teSt
+print(int_func('test'))   # Test
+print(int_func('teSt'))   # teSt
 # Дальнгейшее продолжение работы над заданием
 
 resWords = ''
