@@ -14,8 +14,8 @@ cs.yury.v@pn.me
 
 """
 
-sum = 0
-bWork = True
+sum = 0             # Переменная для накопления суммы
+bWork = True        # False - признак завершения работы программы
 while bWork:
     strFromUser = input('Введите строку чисел, разделенных пробелами: ').split()
     for el in strFromUser:
@@ -27,3 +27,5 @@ while bWork:
                 break
     print(f'Сумма введенных чисел: {sum}')
 print('Программа завершена')
+
+# P.S. Как-то обошлось без функций =(
