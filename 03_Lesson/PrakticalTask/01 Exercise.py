@@ -47,7 +47,7 @@ def inputNum(aInvite='Введите число'):
     """
     while True:
         sFloat = input(aInvite)
-        if sInt == '':
+        if sFloat == '':
             return None
         if isfloat(sFloat):
             return float(sFloat)

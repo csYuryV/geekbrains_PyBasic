@@ -32,7 +32,6 @@ def outUserPersonalData(aName=None, aSurname=None, aYearOfBirth=None, aCityOfRes
     else:
         if aName is not None:
             sRes = f'Имя: {aName.title()}.'
-
         if aSurname is not None:
             if sRes is not None:
                 sRes = sRes[:-1] + ', фамилия: '
