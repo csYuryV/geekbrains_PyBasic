@@ -1,10 +1,10 @@
 """
-Python Basic Lesson 03, Exercise 06
+Python Basic Lesson 04, Exercise 06a
 
 Реализовать бесконечный итератор, генерирующий целые числа, начиная с указанного
 
 20191018 Sikorskiy Yuriy
-cs.yury.v@pn.me
+cs.yury.v@pm.me
 
 """
 import itertools
