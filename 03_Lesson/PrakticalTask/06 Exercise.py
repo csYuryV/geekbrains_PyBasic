@@ -26,16 +26,16 @@ def int_func(aStr):
     return aStr.title()
 
 
-print(int_func('test'))   # Test
-print(int_func('teSt'))   # teSt
-# Дальнгейшее продолжение работы над заданием
+print(int_func('test'))  # Test
+print(int_func('teSt'))  # teSt
+# Дальнейшее продолжение работы над заданием
 
 resWords = ''
 words = input("Введите строку из слов разделенных пробелами: ").split()
 for el in words:
     resWords = ('' if len(resWords) == 0 else (resWords + ' ')) + int_func(el)
 
-print(f'Измененная мсходная строка: {resWords}')
+print(f'Измененная исходная строка: {resWords}')
 
 # P.S. Принят набор строчных букв из современного латинского алфавита.
 # Также различают Классический латинский алфавит и Архаичный латинский алфавит
