@@ -1,0 +1,12 @@
+Python | lecture:2 practicalLesson:3 laboratoryWork:3
+Стажировка в Geekbrains | lecture:2 practicalLesson:3 laboratoryWork:0
+Английский для IT-специалистов | lecture:3 practicalLesson:0 laboratoryWork:3
+Как стать программистом? | practicalLesson:2 laboratoryWork:2
+Базовый курс JavaScript | lecture:3 practicalLesson:2 laboratoryWork:3
+Клиент-серверные приложения на Python | lecture:3 practicalLesson:1 laboratoryWork:2
+Django Framework. Часть 1 | lecture:2 practicalLesson:2 laboratoryWork:2
+Django Framework. Часть 2 | practicalLesson:1 laboratoryWork:3
+Интерактивный курс по HTML&CSS | lecture:2 practicalLesson:1 laboratoryWork:2
+Алгоритмы и структуры данных на Python | practicalLesson:1 laboratoryWork:2
+Базы данных | lecture:1 practicalLesson:3 laboratoryWork:3
+Введение в Git | lecture:3 practicalLesson:1
