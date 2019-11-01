@@ -48,9 +48,17 @@ class Matrix:
         return temp
 
 
-        return self.value
-
-
+# # mat1 и mat2  исходные матрицы одинакового размера
+# res = [] # результирующая матрица
+#
+# i = 0
+# while i < len(mat1):
+#     res.append([])
+#     j = 0
+#     while j < len(mat1[i]):
+#         res[i].append(mat1[i][j] + mat2[i][j])
+#         j += 1
+#     i += 1
 
 
 
