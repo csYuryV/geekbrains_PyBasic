@@ -49,22 +49,27 @@ class Dict_cards(Dict_entities):
 
 
 class Card_item(Essence):
-    def __init__(self, name, description=''):
+    def __init__(self, name, description='', price=0.0):
         super().__init__(name)
         # description - описание ТМЦ
         # price - цена за единицу
         self._description = description
+        self._price = price
 
     def get_description(self):
         return self._description
 
+    def get_price(self):
+        return self._price
 
 class Dict_storage_points(Dict_entities):
+    # Словарь точек хранения
     def __init__(self):
         super().__init__('Список точек хранения и контрагентов.')
 
 
 class Dict_move_item(Dict_entities):
+    # Словарь записей в амбарную книгу
     def __init__(self, name):
         super().__init__(name)
 
@@ -73,12 +78,12 @@ class Record_move_item(Essence):
     # Запись в амбарную книгу о перемещении ТМЦ
     def __init__(self, dttm, st_pnt, move_st_pnt, card, quantity):
         super().__init__('')
-        # dttm - дата и время двиения ТМЦ
-        # id_st_pnt -  id точки хранения
-        # id_move - id кореспондирующей точки хранения. Если приход то откуда, если расход то куда
-        # произоло перемещение ТМЦ
-        # id_card - id карточки ТМЦ
-        # quantity - количество перемещаемых едениц ТМЦ если положительное то приход, если отрицательное то расход
+        # _dttm - дата и время двиения ТМЦ
+        # _st_pnt -  точка хранения
+        # _move_st_pnt - корреспондирующая точка хранения. Если приход то откуда, если расход то куда
+        # _произоло перемещение ТМЦ
+        # _card - карточки ТМЦ
+        # _quantity - количество перемещаемых едениц ТМЦ если положительное то приход, если отрицательное то расход
         self._dttm = dttm
         self._st_pnt = st_pnt
         self._move_st_pnt = move_st_pnt
@@ -175,10 +180,10 @@ def main():
     dict_move_item = Dict_move_item('')
 
     dict_cards = Dict_cards()
-    dict_cards.add(Card_item('Компьютер', 'DeskTop'))
-    dict_cards.add(Card_item('Компьютер', 'Notebook'))
-    dict_cards.add(Card_item('Принтер', 'HP Laser Jet 1018'))
-    dict_cards.add(Card_item('Картридж', 'HP Q2612L экономичный 12L', ))
+    dict_cards.add(Card_item('Компьютер', 'DeskTop', 25000.0))
+    dict_cards.add(Card_item('Компьютер', 'Notebook', 35000.0))
+    dict_cards.add(Card_item('Принтер', 'HP Laser Jet 1018', 6000.0))
+    dict_cards.add(Card_item('Картридж', 'HP Q2612L экономичный 12L', 780.0))
 
     print()
     Show_dict_cards(dict_cards)()
